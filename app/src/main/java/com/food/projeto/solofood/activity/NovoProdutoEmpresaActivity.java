@@ -145,6 +145,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
                     produto.setNome(nome);
                     produto.setDescricao(descricao);
                     produto.setPreco(Double.parseDouble(precoFormat));
+                    produto.setUrlImagem(urlImagemSelecionada);
                     produto.salvar();
 
                     finish();

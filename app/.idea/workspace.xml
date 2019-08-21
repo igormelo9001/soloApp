@@ -11,10 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c257fb-8d5b-4464-ab3c-e6774c447440" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/adapter/AdapterProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/listener/RecyclerItemClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/adapter_produto.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/divisor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_configuracoes_empresa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_configuracoes_empresa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,31 +48,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="127" column="41" lean-forward="true" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
+            <state relative-caret-position="219">
+              <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2104#2477#0" expanded="true" />
-                <element signature="e#2476#2477#0" expanded="true" />
-                <element signature="e#4845#5275#0" expanded="true" />
-                <element signature="e#5274#5275#0" expanded="true" />
-                <element signature="e#5298#6147#0" expanded="true" />
-                <element signature="e#6146#6147#0" expanded="true" />
-                <element signature="e#7068#7493#0" expanded="true" />
-                <element signature="e#7492#7493#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_configuracoes_empresa.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Empresa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-17">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -84,54 +90,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="146" column="67" selection-start-line="146" selection-start-column="67" selection-end-line="146" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1683#2056#0" expanded="true" />
-                <element signature="e#2055#2056#0" expanded="true" />
-                <element signature="e#3476#3894#0" expanded="true" />
-                <element signature="e#3893#3894#0" expanded="true" />
-                <element signature="e#3917#4766#0" expanded="true" />
-                <element signature="e#4765#4766#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#859#860#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1111#1112#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/adapter_produto.xml">
           <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="-308">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="119">
+              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/adapter/AdapterProduto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1410#1411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7538#8387#0" expanded="true" />
+                <element signature="e#8386#8387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -151,6 +152,8 @@
     <findStrings>
       <find>rec</find>
       <find>vali</find>
+      <find>va</find>
+      <find>pica</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,10 +169,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/SplashActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/toolbar.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml" />
         <option value="$PROJECT_DIR$/src/main/res/menu/menu_empresa.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/AutenticacaoActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/src/main/res/menu/menu_usuario.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/HomeActivity.java" />
@@ -180,9 +181,14 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_configuracoes_empresa.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/listener/RecyclerItemClickListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/adapter/AdapterProduto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/adapter_produto.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java" />
       </list>
     </option>
   </component>
@@ -202,6 +208,67 @@
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="listener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="solofood" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -237,13 +304,18 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="HAAZB600E1736LG" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/crudFirebase/socialnetwork/app" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/socialNetworkProject/socialnetworkproject/app" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\igor\soloFood\app\src\main\java\com\food\projeto\solofood\adapter" />
+      <recent name="C:\Users\igor\soloFood\app\src\main\res\layout" />
+      <recent name="C:\Users\igor\soloFood\app\src\main\java\com\food\projeto\solofood\listener" />
+    </key>
     <key name="android.template.packageName">
       <recent name="com.food.projeto.solofood.activity" />
     </key>
@@ -343,7 +415,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1452345" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24357034" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -352,13 +424,13 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.37806875" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.4304419" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4977307" weight="0.0883797" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50378215" side_tool="true" weight="0.3747954" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50226927" side_tool="true" weight="0.26350245" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.17839608" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49621785" weight="0.41080198" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49621785" visible="true" weight="0.41080198" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Assistant" weight="0.32980332" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -452,16 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="76" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
@@ -511,26 +573,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="58" selection-start-line="8" selection-start-column="4" selection-end-line="30" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/menu/menu_empresa.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="36" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/AutenticacaoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -549,24 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Empresa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-308">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_configuracoes_empresa.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -575,59 +604,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/listener/RecyclerItemClickListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        <state relative-caret-position="-747">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Empresa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/AutenticacaoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_novo_produto_empresa.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/NovoProdutoEmpresaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="146" column="67" selection-start-line="146" selection-start-column="67" selection-end-line="146" selection-end-column="67" />
+        <state relative-caret-position="411">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1683#2056#0" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#3476#3894#0" expanded="true" />
-            <element signature="e#3893#3894#0" expanded="true" />
-            <element signature="e#3917#4766#0" expanded="true" />
-            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#1909#2282#0" expanded="true" />
+            <element signature="e#2281#2282#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/adapter/AdapterProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/adapter_produto.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/ConfiguracoesEmpresaActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="127" column="41" lean-forward="true" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
+        <state relative-caret-position="741">
+          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2104#2477#0" expanded="true" />
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#4845#5275#0" expanded="true" />
-            <element signature="e#5274#5275#0" expanded="true" />
-            <element signature="e#5298#6147#0" expanded="true" />
-            <element signature="e#6146#6147#0" expanded="true" />
-            <element signature="e#7068#7493#0" expanded="true" />
-            <element signature="e#7492#7493#0" expanded="true" />
+            <element signature="e#7538#8387#0" expanded="true" />
+            <element signature="e#8386#8387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_empresa.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/model/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/food/projeto/solofood/activity/EmpresaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="75" column="69" selection-start-line="75" selection-start-column="69" selection-end-line="75" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
