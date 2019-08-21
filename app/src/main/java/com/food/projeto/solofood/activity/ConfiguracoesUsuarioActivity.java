@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.food.projeto.solofood.R;
 
-public class ConfiguracoesUsuario extends AppCompatActivity {
+public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

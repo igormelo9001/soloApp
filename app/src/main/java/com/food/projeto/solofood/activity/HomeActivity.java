@@ -7,7 +7,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.food.projeto.solofood.R;
 import com.food.projeto.solofood.adapter.AdapterEmpresa;
-import com.food.projeto.solofood.adapter.AdapterProduto;
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
 import com.food.projeto.solofood.listener.RecyclerItemClickListener;
 import com.food.projeto.solofood.model.Empresa;
-import com.food.projeto.solofood.model.Produto;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -52,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Ifood");
+        toolbar.setTitle("Comida em casa");
         setSupportActionBar(toolbar);
 
         recyclerEmpresa.setLayoutManager(new LinearLayoutManager(this));
@@ -190,7 +187,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     private void abrirConfiguracoes() {
-        startActivity(new Intent(HomeActivity.this, ConfiguracoesEmpresaActivity.class));
+        startActivity(new Intent(HomeActivity.this, ConfiguracoesUsuarioActivity.class));
     }
 
 

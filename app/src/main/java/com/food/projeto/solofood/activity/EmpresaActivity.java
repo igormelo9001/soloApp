@@ -52,7 +52,7 @@ public class EmpresaActivity extends AppCompatActivity {
         idUsuarioLogado = UsuarioFirebase.getIdUsuario();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Ifood - empresa");
+        toolbar.setTitle("Comida em casa - empresa");
         setSupportActionBar(toolbar);
 
         recyclerProdutos.setLayoutManager(new LinearLayoutManager(this));
