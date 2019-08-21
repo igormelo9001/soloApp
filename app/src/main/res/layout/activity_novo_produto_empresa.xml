@@ -3,27 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".activity.NovoProdutoEmpresaActivity">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageProduto"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:src="@drawable/perfil" />
+
 
         <EditText
             android:id="@+id/editNomeProduto"
@@ -67,7 +68,6 @@
             android:textColor="@color/colorPrimary"
             android:theme="@style/botaoPadrao"
             tools:text="Salvar" />
-
 
     </LinearLayout>
 

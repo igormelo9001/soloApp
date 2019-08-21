@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,7 @@ import com.food.projeto.solofood.R;
 import com.food.projeto.solofood.adapter.AdapterEmpresa;
 import com.food.projeto.solofood.adapter.AdapterProduto;
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
+import com.food.projeto.solofood.listener.RecyclerItemClickListener;
 import com.food.projeto.solofood.model.Empresa;
 import com.food.projeto.solofood.model.Produto;
 import com.google.firebase.auth.FirebaseAuth;
@@ -73,6 +76,28 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        recyclerEmpresa.addOnItemTouchListener(
+                new RecyclerItemClickListener(this,
+                        recyclerEmpresa, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+
+                        Empresa empresaSelecionada = empresas.get(position);
+                        Intent i = new Intent(HomeActivity.this, CardapioActivity.class);
+                        i.putExtra("empresa", empresaSelecionada);
+                        startActivity(i);
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position) {
+
+                    }
+
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    }
+                }));
 
     }
 

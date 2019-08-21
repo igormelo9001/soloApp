@@ -3,7 +3,9 @@ package com.food.projeto.solofood.model;
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
-public class Empresa {
+import java.io.Serializable;
+
+public class Empresa implements Serializable {
 
     private String idUsuario;
     private String urlImagem;

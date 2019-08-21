@@ -33,7 +33,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
     private EditText editNomeProduto, editDescricao, editPreco;
     private String idUsuarioLogado;
     private ImageView imageProduto;
-    private static final int SELECAO_GALERIA = 200;
+    private static final int SELECAO_GALERIA = 300;
     private String urlImagemSelecionada = "";
     private StorageReference storageReference;
 

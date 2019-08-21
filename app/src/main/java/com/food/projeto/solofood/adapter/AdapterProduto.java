@@ -40,7 +40,7 @@ public class AdapterProduto extends RecyclerView.Adapter<AdapterProduto.MyViewHo
         holder.nome.setText(produto.getNome());
         holder.descricao.setText(produto.getDescricao());
         holder.valor.setText("R$ " + produto.getPreco());
-        if (produto.getUrlImagem() != null){
+        if (produto.getUrlImagem() != ""){
             Uri uri = Uri.parse(produto.getUrlImagem());
             Picasso.get().load(uri).into(holder.imagem);
         }else {
