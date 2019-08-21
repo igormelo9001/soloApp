@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ea1d2c"
+    android:background="#E88822"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
@@ -15,7 +15,7 @@
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/comidaemcasa" />
 
     <EditText
         android:id="@+id/editCadastroEmail"
