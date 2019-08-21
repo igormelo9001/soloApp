@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -230,10 +229,10 @@ public class ConfiguracoesEmpresaActivity extends AppCompatActivity {
 
     private void inicializarComponentes() {
 
-        editEmpresaNome = findViewById(R.id.editEmpresaNome);
+        editEmpresaNome = findViewById(R.id.editNomeEmpresa);
         editEmpresaCategoria = findViewById(R.id.editEmpresaCategoria);
         editEmpresaTempo = findViewById(R.id.editEmpresaTempo);
-        editEmpresataxa = findViewById(R.id.editEmpresaTaxa);
+        editEmpresataxa = findViewById(R.id.editEmpresataxa);
         imagePerfilEmpresa = findViewById(R.id.imagePerfilEmpresa);
     }
 
