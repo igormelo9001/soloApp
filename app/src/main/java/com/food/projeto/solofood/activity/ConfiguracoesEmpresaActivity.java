@@ -121,6 +121,8 @@ public class ConfiguracoesEmpresaActivity extends AppCompatActivity {
         String categoria = editEmpresaCategoria.getText().toString();
         String tempo = editEmpresaTempo.getText().toString();
 
+        String taxaFormat = taxa.replace(",", ".");
+
         if(!nome.isEmpty()){
             if(!taxa.isEmpty()){
                 if(!categoria.isEmpty()){
@@ -129,7 +131,7 @@ public class ConfiguracoesEmpresaActivity extends AppCompatActivity {
                         Empresa empresa = new Empresa();
                         empresa.setIdUsuario(idUsuarioLogado);
                         empresa.setNome(nome);
-                        empresa.setPrecoEntrega(Double.parseDouble(taxa));
+                        empresa.setPrecoEntrega(Double.parseDouble(taxaFormat));
                         empresa.setCategoria(categoria);
                         empresa.setTempo(tempo);
                         empresa.setUrlImagem(urlImagemSelecionada);
