@@ -23,8 +23,13 @@ import com.food.projeto.solofood.model.Produto;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 
@@ -90,7 +95,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
                     imagem.compress(Bitmap.CompressFormat.JPEG, 70, baos);
                     final byte[] dadosImagem = baos.toByteArray();
 
-                    final StorageReference imagemRef = storageReference
+                     StorageReference imagemRef = storageReference
                             .child("imagens")
                             .child("produtos")
                             .child(idUsuarioLogado + "jpeg");
@@ -109,6 +114,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                             //urlImagemSelecionada = taskSnapshot.getStorage().getDownloadUrl().toString();
+
                             Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
                             while(!uriTask.isSuccessful());
                             Uri url = uriTask.getResult();
