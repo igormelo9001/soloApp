@@ -66,7 +66,7 @@ public class PedidosActivity extends AppCompatActivity {
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-
+                        finish();
                     }
 
                     @Override
@@ -74,9 +74,7 @@ public class PedidosActivity extends AppCompatActivity {
                         Pedido pedido = pedidos.get(position);
                         pedido.setStatus("finalizado");
                         pedido.atualizarStatus();
-                        if(pedido.getStatus().equals("finalizado")){
-                            pedido.removerFinalizado();
-                        }
+
                     }
 
                     @Override
@@ -116,7 +114,10 @@ public class PedidosActivity extends AppCompatActivity {
                     adapterPedido.notifyDataSetChanged();
                     dialog.dismiss();
 
+                }else {
+                    dialog.dismiss();
                 }
+
 
             }
 
