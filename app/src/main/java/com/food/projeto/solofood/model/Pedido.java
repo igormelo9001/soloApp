@@ -3,6 +3,7 @@ package com.food.projeto.solofood.model;
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Pedido {
@@ -66,6 +67,32 @@ public class Pedido {
                 .child(getIdUsuario());
 
         pedidoRef.removeValue();
+    }
+
+    public void removerFinalizado(){
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos")
+                .child(getIdEmpresa())
+                .child(getIdUsuario());
+
+        pedidoRef.removeValue();
+    }
+
+    public void atualizarStatus(){
+
+        HashMap<String, Object> status = new HashMap<>();
+        status.put("status", getStatus());
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos")
+                .child(getIdEmpresa())
+                .child(getIdPedido());
+
+        pedidoRef.updateChildren(status);
+
     }
 
     public String getIdUsuario() {
