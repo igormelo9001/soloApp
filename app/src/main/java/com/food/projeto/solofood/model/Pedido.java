@@ -34,6 +34,17 @@ public class Pedido {
 
     }
 
+    public void confirmar(){
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos")
+                .child(getIdEmpresa())
+                .child(getIdPedido());
+
+        pedidoRef.setValue(this);
+    }
+
     public void salvar(){
 
         DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
@@ -44,6 +55,17 @@ public class Pedido {
         setIdPedido(pedidoRef.push().getKey());
 
         pedidoRef.setValue(this);
+    }
+
+    public void remover(){
+
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebase();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos_usuario")
+                .child(getIdEmpresa())
+                .child(getIdUsuario());
+
+        pedidoRef.removeValue();
     }
 
     public String getIdUsuario() {

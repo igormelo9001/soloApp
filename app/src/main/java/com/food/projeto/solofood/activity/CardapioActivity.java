@@ -1,5 +1,6 @@
 package com.food.projeto.solofood.activity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,9 +53,13 @@ public class CardapioActivity extends AppCompatActivity {
     private DatabaseReference firebaseRef;
     private String idEmpresa;
     private AlertDialog dialog;
+    private TextView textCarrinhoQtd, textCarrinnhoTtotal;
     private String idUsuarioLogado;
     private Usuario usuario;
     private Pedido pedidoRecuperado;
+    private int qtdeItensCarrinho;
+    private Double totalCarrinho;
+    private int metodoPagamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +140,14 @@ public class CardapioActivity extends AppCompatActivity {
                 itemPedido.setNomeProduto(produtoSelecionado.getNome());
                 itemPedido.setPreco(produtoSelecionado.getPreco());
                 itemPedido.setQuantidade(Integer.parseInt(quantidade));
-                itensCarrinho.add(itemPedido);
+//                for(ItemPedido item: itensCarrinho){
+//                    // Verifica se o produto ja existe no carrinho
+//                    if( !(item.getIdProduto().equals( produtoSelecionado.getIdProduto() )) ){
+                itensCarrinho.add( itemPedido );
+//                    }
+//
+//                }
+                //itensCarrinho.add(itemPedido);
 
                 if( pedidoRecuperado == null){
                     pedidoRecuperado = new Pedido(idUsuarioLogado, idEmpresa);
@@ -190,8 +203,52 @@ public class CardapioActivity extends AppCompatActivity {
 
     private void recuperarPedido() {
 
-        dialog.dismiss();
+        DatabaseReference pedidoRef = firebaseRef
+                .child("pedidos_usuario")
+                .child(idEmpresa)
+                .child(idUsuarioLogado);
 
+        pedidoRef.addValueEventListener(new ValueEventListener() {
+            @SuppressLint({"SetTextI18n", "DefaultLocale"})
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                qtdeItensCarrinho = 0;
+                totalCarrinho = 0.0;
+                itensCarrinho = new ArrayList<>();
+
+                if(dataSnapshot.getValue() != null){
+
+                    pedidoRecuperado = dataSnapshot.getValue(Pedido.class);
+                    itensCarrinho = pedidoRecuperado.getItens();
+
+
+                        for(ItemPedido itemPedido: itensCarrinho){
+
+                            int qtde = itemPedido.getQuantidade();
+                            Double preco = itemPedido.getPreco();
+
+                            totalCarrinho += qtde * preco;
+                            qtdeItensCarrinho += qtde;
+
+                        }
+                }
+
+                DecimalFormat df = new DecimalFormat("0.00");
+
+                textCarrinhoQtd.setText(String.format("qtd: %d", qtdeItensCarrinho));
+                textCarrinnhoTtotal.setText("R$ " + df.format(totalCarrinho));
+
+                dialog.dismiss();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        dialog.dismiss();
     }
 
     private void recuperarProdutos(){
@@ -226,6 +283,8 @@ public class CardapioActivity extends AppCompatActivity {
         recyclerProdutosCardapio = findViewById(R.id.recyclerProdutosCardapio);
         imageEmpresaCardapio = findViewById(R.id.imageEmpresaCardapio);
         textNomeEmpresaCardapio = findViewById(R.id.textNomeEmpresaCardapio);
+        textCarrinhoQtd = findViewById(R.id.textCarrinhoQtd);
+        textCarrinnhoTtotal = findViewById(R.id.textCarrinhoTotal);
     }
 
     @Override
@@ -240,10 +299,55 @@ public class CardapioActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.menuPedido:
-
+                confirmarPedido();
                 break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void confirmarPedido() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Selecione um método de pagamento");
+
+        CharSequence[] itens = new CharSequence[]{
+                "Dinheiro","Máquina cartão"
+        };
+        builder.setSingleChoiceItems(itens, 0, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                metodoPagamento = i;
+            }
+        });
+
+        final EditText editObservacao = new EditText(this);
+        editObservacao.setHint("Digite uma observação");
+        builder.setView(editObservacao);
+
+        builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String observacao = editObservacao.getText().toString();
+                pedidoRecuperado.setMetodoPagamento(metodoPagamento);
+                pedidoRecuperado.setObservacao(observacao);
+                pedidoRecuperado.setStatus("Confirmado");
+                pedidoRecuperado.confirmar();
+                pedidoRecuperado.remover();
+
+                pedidoRecuperado = null;
+            }
+        });
+
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
     }
 }
