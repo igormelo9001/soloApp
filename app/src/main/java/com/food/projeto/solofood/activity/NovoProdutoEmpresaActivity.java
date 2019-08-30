@@ -112,11 +112,8 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
                     }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                            //urlImagemSelecionada = taskSnapshot.getStorage().getDownloadUrl().toString();
-
                             Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                            while(!uriTask.isSuccessful());
+                           while(!uriTask.isSuccessful());
                             Uri url = uriTask.getResult();
                             urlImagemSelecionada = url.toString();
                             Toast.makeText(NovoProdutoEmpresaActivity.this,

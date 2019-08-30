@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -140,17 +141,14 @@ public class CardapioActivity extends AppCompatActivity {
                 itemPedido.setNomeProduto(produtoSelecionado.getNome());
                 itemPedido.setPreco(produtoSelecionado.getPreco());
                 itemPedido.setQuantidade(Integer.parseInt(quantidade));
-//                for(ItemPedido item: itensCarrinho){
-//                    // Verifica se o produto ja existe no carrinho
-//                    if( !(item.getIdProduto().equals( produtoSelecionado.getIdProduto() )) ){
                 itensCarrinho.add( itemPedido );
-//                    }
-//
-//                }
-                //itensCarrinho.add(itemPedido);
 
                 if( pedidoRecuperado == null){
                     pedidoRecuperado = new Pedido(idUsuarioLogado, idEmpresa);
+                }
+
+                if(usuario == null){
+                    usuario = new Usuario();
                 }
 
                 pedidoRecuperado.setNome(usuario.getNome());
@@ -321,16 +319,29 @@ public class CardapioActivity extends AppCompatActivity {
             }
         });
 
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+
+
         final EditText editObservacao = new EditText(this);
+        final EditText editLocalAtual = new EditText(this);
         editObservacao.setHint("Digite uma observação");
-        builder.setView(editObservacao);
+        layout.addView(editObservacao);
+        editLocalAtual.setHint("Digite o endereço de entrega");
+        layout.addView(editLocalAtual);
+        builder.setView(layout);
+        //builder.setView(editObservacao);
+        //builder.setView(editLocalAtual);
 
         builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String observacao = editObservacao.getText().toString();
+                String localAtual = editLocalAtual.getText().toString();
                 pedidoRecuperado.setMetodoPagamento(metodoPagamento);
                 pedidoRecuperado.setObservacao(observacao);
+                pedidoRecuperado.setLocalAtual(localAtual);
                 pedidoRecuperado.setStatus("Confirmado");
                 pedidoRecuperado.confirmar();
                 pedidoRecuperado.remover();

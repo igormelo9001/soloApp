@@ -2,6 +2,7 @@ package com.food.projeto.solofood.model;
 
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +19,9 @@ public class Pedido {
     private String status = "pendente";
     private int metodoPagamento;
     private String observacao;
+    private String localAtual;
+
+
 
     public Pedido() {
     }
@@ -76,8 +80,8 @@ public class Pedido {
                 .child("pedidos")
                 .child(getIdEmpresa())
                 .child(getIdUsuario());
+            pedidoRef.removeValue();
 
-        pedidoRef.removeValue();
     }
 
     public void atualizarStatus(){
@@ -173,5 +177,13 @@ public class Pedido {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public String getLocalAtual() {
+        return localAtual;
+    }
+
+    public void setLocalAtual(String localAtual) {
+        this.localAtual = localAtual;
     }
 }

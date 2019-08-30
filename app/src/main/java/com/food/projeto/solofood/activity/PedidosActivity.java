@@ -74,7 +74,7 @@ public class PedidosActivity extends AppCompatActivity {
                         Pedido pedido = pedidos.get(position);
                         pedido.setStatus("finalizado");
                         pedido.atualizarStatus();
-
+                        pedido.removerFinalizado();
                     }
 
                     @Override
