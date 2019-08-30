@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.food.projeto.solofood.R;
 import com.food.projeto.solofood.adapter.AdapterPedido;
-import com.food.projeto.solofood.adapter.AdapterProduto;
 import com.food.projeto.solofood.helper.ConfiguracaoFirebase;
 import com.food.projeto.solofood.helper.UsuarioFirebase;
 import com.food.projeto.solofood.listener.RecyclerItemClickListener;
@@ -74,7 +73,7 @@ public class PedidosActivity extends AppCompatActivity {
                         Pedido pedido = pedidos.get(position);
                         pedido.setStatus("finalizado");
                         pedido.atualizarStatus();
-                        pedido.removerFinalizado();
+                        adapterPedido.notifyItemChanged(position);
                     }
 
                     @Override

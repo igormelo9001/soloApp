@@ -35,9 +35,13 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
 
         Pedido pedido = pedidos.get(i);
         holder.nome.setText( pedido.getNome() );
-        holder.endereco.setText( "Endereço: "+pedido.getEndereco() );
+        //holder.endereco.setText( "Endereço: "+pedido.getEndereco() );
         holder.observacao.setText( "Obs: "+ pedido.getObservacao() );
-        holder.localAtual.setText("Endereço de entrega:" + pedido.getLocalAtual());
+        holder.localAtual.setText("Endereço de entrega: " + pedido.getLocalAtual());
+
+//        if(holder.localAtual != null){
+//            holder.endereco.setEnabled(false);
+//        }
 
         List<ItemPedido> itens = new ArrayList<>();
         itens = pedido.getItens();
@@ -82,7 +86,7 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
             super(itemView);
 
             nome        = itemView.findViewById(R.id.textPedidoNome);
-            endereco    = itemView.findViewById(R.id.textPedidoEndereco);
+            //endereco    = itemView.findViewById(R.id.textPedidoEndereco);
             pgto        = itemView.findViewById(R.id.textPedidoPgto);
             observacao  = itemView.findViewById(R.id.textPedidoObs);
             localAtual  = itemView.findViewById(R.id.textLocalAtual);
