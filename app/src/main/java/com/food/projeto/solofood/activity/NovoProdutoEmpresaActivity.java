@@ -32,6 +32,7 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Date;
 
 public class NovoProdutoEmpresaActivity extends AppCompatActivity {
 
@@ -98,7 +99,7 @@ public class NovoProdutoEmpresaActivity extends AppCompatActivity {
                      StorageReference imagemRef = storageReference
                             .child("imagens")
                             .child("produtos")
-                            .child(idUsuarioLogado + "jpeg");
+                            .child(idUsuarioLogado + new Date().getTime() + "jpeg");
 
                     UploadTask uploadTask = imagemRef.putBytes(dadosImagem);
                     uploadTask.addOnFailureListener(new OnFailureListener() {
